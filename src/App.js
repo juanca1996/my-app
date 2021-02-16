@@ -7,7 +7,7 @@ class App extends React.Component{
   render(){
     return <div className="header">
       <Header></Header>
-      <Body></Body>
+      <Body nombre={"principal"}></Body>
     </div>
   }
 }

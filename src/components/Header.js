@@ -1,11 +1,6 @@
 import React from 'react';
 
-
-
-
 class Header extends React.Component{
-
-    
     
     state = {
         options: [{nombre: "Agenda", id: "agenda_id", subArea:[]},
@@ -34,7 +29,7 @@ class Header extends React.Component{
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         {this.state.options.map(({nombre,id,subArea}) => {
-                            return nombre == "Administracion" ? this.createDropList(nombre,subArea):<li className="nav-item" key={id}><a className="nav-link optionsNarv" href="#">{nombre}</a></li>
+                            return nombre == "Administracion" ? this.createDropList(nombre,subArea):<li className="nav-item" key={id}><a className="nav-link optionsNarv" href={nombre}>{nombre}</a></li>
                         }
                         )}
                     </ul>
